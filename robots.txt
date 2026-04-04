@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://skipless.nl/sitemap.xml
