@@ -73,7 +73,10 @@ nav.scrolled{background:rgba(5,13,26,0.95);backdrop-filter:blur(20px);border-bot
 .hero-stat .label{font-size:0.82rem;color:var(--text-muted);margin-top:2px}
 
 /* WhatsApp mockup */
-.whatsapp-mock{background:#0b1520;border-radius:24px;padding:0;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.4);max-width:380px;margin-left:auto}
+.whatsapp-mock{background:#000;border-radius:44px;padding:0;overflow:hidden;box-shadow:0 25px 80px rgba(0,0,0,0.6),0 0 0 1px rgba(255,255,255,0.1);max-width:340px;margin-left:auto;border:3px solid #2a3545;position:relative}
+.phone-notch{width:126px;height:28px;background:#000;border-radius:0 0 20px 20px;margin:0 auto;display:flex;align-items:center;justify-content:center}
+.phone-notch::after{content:"";width:56px;height:5px;background:#1a1a2e;border-radius:3px}
+.phone-home{width:120px;height:5px;background:rgba(255,255,255,0.15);border-radius:3px;margin:12px auto 16px}
 .wa-header{background:#0a5c47;padding:16px 20px;display:flex;align-items:center;gap:12px}
 .wa-avatar{width:40px;height:40px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;color:var(--bg-dark)}
 .wa-name{font-weight:700;font-size:0.95rem}
@@ -299,6 +302,7 @@ footer{background:var(--bg-section);border-top:1px solid var(--border);padding:6
                 <div class="phone-anim-wrapper">
           <div class="phone-orbit"></div>
 <div class="whatsapp-mock">
+          <div class="phone-notch"></div>
           <div class="wa-header">
             <div class="wa-avatar">S</div>
             <div>
@@ -313,6 +317,7 @@ footer{background:var(--bg-section);border-top:1px solid var(--border);padding:6
             <div class="wa-msg incoming">Top! Ik heb je reservering aangepast naar 20:00. Tot morgen! &#127869;<div class="wa-time">14:45</div></div>
             <div class="wa-msg outgoing">Perfect, bedankt! &#128515;<div class="wa-time">14:46</div></div>
           </div>
+<div class="phone-home"></div>
         </div>
 </div>
       </div>
