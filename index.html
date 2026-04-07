@@ -2,21 +2,38 @@
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>No-shows verminderen in je restaurant | Skipless - AI &amp; WhatsApp</title>
-<meta name="description" content="Skipless vermindert no-shows met AI en WhatsApp-herinneringen. Speciaal voor restaurants met Lightspeed of zonder reserveringssysteem. Tot 60% minder no-shows.">
-<meta property="og:title" content="Skipless â Nooit meer lege tafels door no-shows">
-<meta property="og:description" content="AI-gedreven no-show preventie via WhatsApp. Speciaal voor Lightspeed-restaurants en restaurants zonder reserveringssysteem.">
-<meta property="og:image" content="og-image.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>No-shows verminderen in je restaurant | Skipless - AI & WhatsApp</title>
+<meta name="description" content="Verminder no-shows in je restaurant met tot 60%. Skipless stuurt slimme WhatsApp-herinneringen en analyseert risico met AI. Eerste maand gratis. Bereken nu je verlies.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://skipless.nl/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2300D4AA'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='18' font-weight='800' fill='%230B1D35'>S</text></svg>">
+<!-- Open Graph -->
+<meta property="og:title" content="Skipless — Nooit meer lege tafels door no-shows">
+<meta property="og:description" content="AI-gedreven no-show preventie voor restaurants. WhatsApp herinneringen met 92% open rate. Tot 60% minder no-shows.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://skipless.nl">
-<link rel="icon" href="favicon.png" type="image/png">
-<link rel="canonical" href="https://skipless.nl">
+<meta property="og:url" content="https://skipless.nl/">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:site_name" content="Skipless">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Skipless — Nooit meer lege tafels door no-shows">
+<meta name="twitter:description" content="AI-gedreven no-show preventie voor restaurants. WhatsApp herinneringen met 92% open rate.">
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW52KJ47TR"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-MW52KJ47TR');</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MW52KJ47TR');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
+/* ========== RESET & BASE ========== */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'Inter',sans-serif;color:#e2e8f0;background:#050d1a;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+ul{list-style:none}
+
+/* ========== CSS VARIABLES ========== */
 :root{
   --primary:#0B1D35;
   --primary-light:#132D4F;
@@ -34,275 +51,343 @@
   --radius-sm:10px;
   --transition:0.3s cubic-bezier(0.4,0,0.2,1);
 }
-html{scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg-dark);color:var(--text-primary);line-height:1.6;overflow-x:hidden}
-a{color:var(--accent);text-decoration:none;transition:var(--transition)}
-a:hover{opacity:0.85}
+
+/* ========== UTILITIES ========== */
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
+.section{padding:100px 0}
+.section-label{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.section-label::before{content:'';width:20px;height:2px;background:var(--accent);border-radius:2px}
+.section-title{font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.15;color:var(--text-primary);margin-bottom:16px}
+.section-sub{font-size:17px;color:var(--text-secondary);max-width:600px;line-height:1.7}
+.text-center{text-align:center}
+.mx-auto{margin-left:auto;margin-right:auto}
+.accent{color:var(--accent)}
+.orange{color:var(--orange)}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;transition:var(--transition);background:transparent}
-nav.scrolled{background:rgba(5,13,26,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 24px}
-.nav-logo{display:flex;align-items:center;gap:10px;font-size:1.35rem;font-weight:800;color:var(--text-primary)}
-.nav-logo .logo-icon{width:36px;height:36px;background:var(--accent);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;color:var(--bg-dark)}
-.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
-.nav-links a{color:var(--text-secondary);font-size:0.92rem;font-weight:500;transition:var(--transition)}
-.nav-links a:hover{color:var(--text-primary)}
-.nav-cta{background:var(--accent);color:var(--bg-dark)!important;padding:10px 24px;border-radius:100px;font-weight:700;font-size:0.9rem}
-.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 20px var(--accent-glow)}
-.hamburger{display:none;background:none;border:none;color:var(--text-primary);font-size:1.5rem;cursor:pointer}
-
-/* HERO */
-.hero{padding:160px 0 80px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,var(--accent-glow) 0%,transparent 70%);pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,170,0.08);border:1px solid rgba(0,212,170,0.2);padding:8px 20px;border-radius:100px;font-size:0.85rem;color:var(--accent);margin-bottom:24px}
-.hero-badge .dot{width:8px;height:8px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
-.hero h1{font-size:3.5rem;font-weight:900;line-height:1.08;margin-bottom:20px;letter-spacing:-0.02em}
-.hero h1 .accent{color:var(--accent)}
-.hero .subtitle{font-size:1.15rem;color:var(--text-secondary);line-height:1.7;margin-bottom:32px;max-width:520px}
-.hero-buttons{display:flex;gap:16px;flex-wrap:wrap}
-.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--bg-dark);padding:16px 32px;border-radius:100px;font-weight:700;font-size:1rem;transition:var(--transition);border:none;cursor:pointer}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px var(--accent-glow)}
-.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.05);color:var(--text-primary);padding:16px 32px;border-radius:100px;font-weight:600;font-size:1rem;border:1px solid var(--border);transition:var(--transition);cursor:pointer}
-.btn-secondary:hover{background:rgba(255,255,255,0.08);transform:translateY(-2px)}
-.hero-stats{display:flex;gap:40px;margin-top:48px}
-.hero-stat .num{font-size:2.2rem;font-weight:900;color:var(--accent)}
-.hero-stat .label{font-size:0.82rem;color:var(--text-muted);margin-top:2px}
-
-/* WhatsApp mockup */
-.whatsapp-mock{background:#0b1520;border-radius:24px;padding:0;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.4);max-width:380px;margin-left:auto}
-.wa-header{background:#0a5c47;padding:16px 20px;display:flex;align-items:center;gap:12px}
-.wa-avatar{width:40px;height:40px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;color:var(--bg-dark)}
-.wa-name{font-weight:700;font-size:0.95rem}
-.wa-status{font-size:0.75rem;color:rgba(255,255,255,0.6)}
-.wa-messages{padding:16px;display:flex;flex-direction:column;gap:8px}
-.wa-msg{padding:10px 14px;border-radius:12px;font-size:0.85rem;line-height:1.5;max-width:85%}
-.wa-msg.incoming{background:#1a2a3a;border-bottom-left-radius:4px}
-.wa-msg.outgoing{background:#005c4b;align-self:flex-end;border-bottom-right-radius:4px}
-.wa-time{font-size:0.7rem;color:rgba(255,255,255,0.4);margin-top:4px;text-align:right}
-
-/* SEGMENTS */
-.segments{padding:80px 0;background:var(--bg-section)}
-.section-label{text-align:center;font-size:0.85rem;text-transform:uppercase;letter-spacing:2px;color:var(--accent);font-weight:700;margin-bottom:12px}
-.section-title{text-align:center;font-size:2.5rem;font-weight:800;margin-bottom:16px;letter-spacing:-0.02em}
-.section-subtitle{text-align:center;color:var(--text-secondary);font-size:1.05rem;max-width:640px;margin:0 auto 48px}
-.segment-cards{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-.segment-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:40px;transition:var(--transition);position:relative;overflow:hidden}
-.segment-card:hover{border-color:rgba(0,212,170,0.3);transform:translateY(-4px)}
-.segment-card .tag{display:inline-block;background:rgba(0,212,170,0.1);color:var(--accent);padding:6px 16px;border-radius:100px;font-size:0.8rem;font-weight:600;margin-bottom:20px}
-.segment-card h3{font-size:1.5rem;font-weight:800;margin-bottom:12px}
-.segment-card p{color:var(--text-secondary);font-size:0.95rem;line-height:1.7;margin-bottom:24px}
-.segment-card ul{list-style:none;margin-bottom:28px}
-.segment-card ul li{color:var(--text-secondary);font-size:0.9rem;padding:6px 0;display:flex;align-items:center;gap:10px}
-.segment-card ul li::before{content:'\2713';color:var(--accent);font-weight:700}
-.segment-card .card-cta{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-weight:700;font-size:0.95rem}
-.segment-card .card-cta:hover{gap:12px}
-
-/* SOCIAL PROOF */
-.social-proof{padding:60px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;text-align:center}
-.proof-item .big{font-size:2.2rem;font-weight:900;color:var(--accent)}
-.proof-item p{color:var(--text-secondary);font-size:0.9rem;margin-top:4px}
-
-/* PROBLEM / SOLUTION */
-.problem-solution{padding:100px 0}
-.ps-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:40px;align-items:start}
-.ps-column{display:flex;flex-direction:column;gap:20px}
-.ps-column h2{font-size:1.8rem;font-weight:800;margin-bottom:8px}
-.ps-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:24px;transition:var(--transition)}
-.ps-card:hover{border-color:rgba(0,212,170,0.2)}
-.ps-card .icon{font-size:1.5rem;margin-bottom:10px}
-.ps-card h4{font-size:1rem;font-weight:700;margin-bottom:6px}
-.ps-card p{color:var(--text-secondary);font-size:0.88rem;line-height:1.6}
-.ps-divider{width:2px;background:linear-gradient(to bottom,transparent,var(--accent),transparent);min-height:300px;margin-top:40px}
-.ps-column.solution .ps-card{border-color:rgba(0,212,170,0.15)}
-
-/* HOW IT WORKS */
-.how-it-works{padding:100px 0;background:var(--bg-section)}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px}
-.step{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:36px;text-align:center;position:relative;transition:var(--transition)}
-.step:hover{border-color:rgba(0,212,170,0.3);transform:translateY(-4px)}
-.step-num{width:48px;height:48px;background:rgba(0,212,170,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--accent);font-size:1.2rem;margin:0 auto 20px}
-.step .icon{font-size:2rem;margin-bottom:16px}
-.step h3{font-size:1.15rem;font-weight:700;margin-bottom:10px}
-.step p{color:var(--text-secondary);font-size:0.9rem;line-height:1.6}
-
-/* CALCULATOR */
-.calculator{padding:100px 0}
-.calc-container{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:48px;max-width:800px;margin:0 auto}
-.calc-container h2{text-align:center;font-size:2rem;font-weight:800;margin-bottom:8px}
-.calc-subtitle{text-align:center;color:var(--text-secondary);margin-bottom:36px}
-.slider-group{margin-bottom:28px}
-.slider-label{display:flex;justify-content:space-between;margin-bottom:10px;font-size:0.9rem}
-.slider-label .value{color:var(--accent);font-weight:700}
-input[type="range"]{-webkit-appearance:none;width:100%;height:6px;background:var(--primary-light);border-radius:3px;outline:none}
-input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;background:var(--accent);border-radius:50%;cursor:pointer;box-shadow:0 0 10px var(--accent-glow)}
-.calc-results{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:32px;padding-top:32px;border-top:1px solid var(--border)}
-.calc-result{background:rgba(0,0,0,0.2);border-radius:var(--radius-sm);padding:24px;text-align:center}
-.calc-result .amount{font-size:2rem;font-weight:900;margin-bottom:4px}
-.calc-result .amount.loss{color:#ff6b6b}
-.calc-result .amount.save{color:var(--accent)}
-.calc-result .desc{color:var(--text-secondary);font-size:0.85rem}
-.calc-cta{text-align:center;margin-top:28px}
-
-/* FEATURES */
-.features{padding:100px 0;background:var(--bg-section)}
-.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
-.feature-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:var(--transition)}
-.feature-card:hover{border-color:rgba(0,212,170,0.3);transform:translateY(-4px)}
-.feature-card .icon{font-size:2rem;margin-bottom:16px}
-.feature-card h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
-.feature-card p{color:var(--text-secondary);font-size:0.88rem;line-height:1.6}
-
-/* PRICING */
-.pricing{padding:100px 0}
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
-.pricing-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:36px;transition:var(--transition);position:relative}
-.pricing-card:hover{border-color:rgba(0,212,170,0.2)}
-.pricing-card.featured{border-color:var(--accent);background:linear-gradient(135deg,rgba(0,212,170,0.05),var(--bg-card))}
-.pricing-card.featured::before{content:'Populair';position:absolute;top:-12px;right:24px;background:var(--accent);color:var(--bg-dark);padding:4px 14px;border-radius:100px;font-size:0.75rem;font-weight:700}
-.pricing-card .plan-name{font-size:0.9rem;color:var(--text-muted);font-weight:600;margin-bottom:4px}
-.pricing-card .plan-desc{font-size:0.85rem;color:var(--text-secondary);margin-bottom:16px}
-.pricing-card .price{font-size:2.8rem;font-weight:900;margin-bottom:4px}
-.pricing-card .price span{font-size:1rem;font-weight:500;color:var(--text-muted)}
-.pricing-card .price-note{font-size:0.8rem;color:var(--text-muted);margin-bottom:24px}
-.pricing-card ul{list-style:none;margin-bottom:28px}
-.pricing-card ul li{font-size:0.88rem;color:var(--text-secondary);padding:8px 0;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border)}
-.pricing-card ul li:last-child{border-bottom:none}
-.pricing-card ul li::before{content:'\2713';color:var(--accent);font-weight:700;font-size:0.9rem}
-.pricing-btn{display:block;text-align:center;padding:14px;border-radius:100px;font-weight:700;font-size:0.92rem;transition:var(--transition)}
-.pricing-btn.primary{background:var(--accent);color:var(--bg-dark)}
-.pricing-btn.primary:hover{box-shadow:0 4px 20px var(--accent-glow);transform:translateY(-2px)}
-.pricing-btn.outline{border:1px solid var(--border);color:var(--text-primary)}
-.pricing-btn.outline:hover{border-color:var(--accent);color:var(--accent)}
-
-/* FAQ */
-.faq{padding:100px 0;background:var(--bg-section)}
-.faq-list{max-width:740px;margin:48px auto 0}
-.faq-item{border-bottom:1px solid var(--border);padding:20px 0}
-.faq-q{display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-weight:700;font-size:1rem}
-.faq-q .toggle{font-size:1.5rem;color:var(--text-muted);transition:var(--transition)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease;color:var(--text-secondary);font-size:0.92rem;line-height:1.7}
-.faq-item.open .faq-a{max-height:300px;padding-top:12px}
-.faq-item.open .toggle{transform:rotate(45deg);color:var(--accent)}
-
-/* FINAL CTA */
-.final-cta{padding:100px 0;text-align:center}
-.final-cta h2{font-size:2.5rem;font-weight:900;margin-bottom:16px}
-.final-cta p{color:var(--text-secondary);font-size:1.05rem;margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto}
-.final-cta .meta{font-size:0.85rem;color:var(--text-muted);margin-top:16px}
-
-/* FOOTER */
-footer{background:var(--bg-section);border-top:1px solid var(--border);padding:60px 0 32px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
-.footer-brand .logo{display:flex;align-items:center;gap:10px;font-size:1.2rem;font-weight:800;margin-bottom:12px}
-.footer-brand .logo .logo-icon{width:32px;height:32px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--bg-dark);font-size:0.9rem}
-.footer-brand p{color:var(--text-muted);font-size:0.85rem;line-height:1.6}
-.footer-col h4{font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;color:var(--text-secondary)}
-.footer-col a{display:block;color:var(--text-muted);font-size:0.88rem;padding:4px 0;transition:var(--transition)}
-.footer-col a:hover{color:var(--text-primary)}
-.footer-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;font-size:0.8rem;color:var(--text-muted)}
-.footer-bottom a{color:var(--text-muted)}
-.footer-bottom a:hover{color:var(--text-primary)}
-
-/* REVEAL ANIMATION */
-.reveal,.reveal-left,.reveal-right{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease}
-.reveal-left{transform:translateX(-30px)}
-.reveal-right{transform:translateX(30px)}
-.reveal.visible,.reveal-left.visible,.reveal-right.visible{opacity:1;transform:translate(0)}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-  .hero{padding:120px 0 60px}
-  .hero-grid{grid-template-columns:1fr;gap:40px}
-  .hero h1{font-size:2.4rem}
-  .hero-stats{gap:24px}
-  .whatsapp-mock{max-width:100%}
-  .segment-cards{grid-template-columns:1fr}
-  .proof-grid{grid-template-columns:1fr;gap:24px}
-  .ps-grid{grid-template-columns:1fr;gap:32px}
-  .ps-divider{display:none}
-  .steps{grid-template-columns:1fr}
-  .feature-grid{grid-template-columns:1fr}
-  .pricing-grid{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr;gap:32px}
-  .nav-links{display:none}
-  .hamburger{display:block}
-  .footer-bottom{flex-direction:column;gap:8px}
-}
-
+/* ========== ANIMATIONS ========== */
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideLeft{from{opacity:0;transform:translateX(60px)}to{opacity:1;transform:translateX(0)}}
+@keyframes slideRight{from{opacity:0;transform:translateX(-60px)}to{opacity:1;transform:translateX(0)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+@keyframes typeChat{from{width:0}to{width:100%}}
+@keyframes blink{0%,50%{opacity:1}51%,100%{opacity:0}}
+@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 @keyframes countUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(0.8)}to{opacity:1;transform:scale(1)}}
+@keyframes ripple{0%{transform:scale(0.8);opacity:0.5}100%{transform:scale(2.5);opacity:0}}
+@keyframes orbitSlow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes glowPulse{0%,100%{box-shadow:0 0 20px rgba(0,212,170,0.1)}50%{box-shadow:0 0 40px rgba(0,212,170,0.25)}}
+
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 0.8s ease,transform 0.8s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity 0.8s ease,transform 0.8s ease}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(40px);transition:opacity 0.8s ease,transform 0.8s ease}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+.delay-1{transition-delay:0.1s}
+.delay-2{transition-delay:0.2s}
+.delay-3{transition-delay:0.3s}
+.delay-4{transition-delay:0.4s}
+.delay-5{transition-delay:0.5s}
+
+/* ========== NAV ========== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 0;transition:var(--transition)}
+.nav.scrolled{background:rgba(5,13,26,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:10px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;color:white}
+.nav-logo svg{width:32px;height:32px}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:#cbd5e1;transition:var(--transition)}
+.nav-links a:hover{color:white}
+.nav-links a.nav-cta{padding:10px 24px;background:var(--accent);color:var(--primary);font-weight:700;font-size:14px;border-radius:100px;transition:var(--transition);border:none;cursor:pointer}
+.nav-cta:hover{background:#b0ffe8;transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,212,170,0.3)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.hamburger span{width:24px;height:2px;background:white;border-radius:2px;transition:var(--transition)}
+
+/* ========== HERO ========== */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding-top:100px;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(0,212,170,0.08) 0%,transparent 70%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-100px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(0,100,255,0.06) 0%,transparent 70%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:100px;background:rgba(0,212,170,0.1);border:1px solid rgba(0,212,170,0.2);font-size:13px;font-weight:600;color:var(--accent);margin-bottom:24px;animation:fadeIn 0.6s ease}
+.hero-badge .dot{width:8px;height:8px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite}
+.hero h1{font-size:clamp(36px,5vw,58px);font-weight:900;line-height:1.08;color:white;margin-bottom:20px;animation:fadeUp 0.8s ease}
+.hero h1 .highlight{background:linear-gradient(135deg,var(--accent),#00f5c8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:18px;color:var(--text-secondary);line-height:1.7;margin-bottom:36px;max-width:520px;animation:fadeUp 0.8s ease 0.2s both}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;animation:fadeUp 0.8s ease 0.4s both}
+.btn-primary{padding:16px 36px;background:var(--accent);color:var(--primary);font-weight:700;font-size:16px;border-radius:100px;transition:var(--transition);display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer}
+.btn-primary:hover{background:white;transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,212,170,0.3)}
+.btn-secondary{padding:16px 36px;background:transparent;color:white;font-weight:600;font-size:16px;border-radius:100px;border:1px solid rgba(255,255,255,0.15);transition:var(--transition);display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+.btn-secondary:hover{border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.05);transform:translateY(-2px)}
+.hero-stats{display:flex;gap:32px;margin-top:40px;animation:fadeUp 0.8s ease 0.6s both}
+.hero-stat{display:flex;flex-direction:column}
+.hero-stat .num{font-size:28px;font-weight:800;color:var(--accent)}
+.hero-stat .label{font-size:13px;color:var(--text-muted);margin-top:2px}
+
+/* ---- Phone Mockup ---- */
+.phone-wrapper{position:relative;display:flex;justify-content:center;animation:slideLeft 1s ease 0.3s both}
+.phone-orbit{position:absolute;width:360px;height:360px;border:1px dashed rgba(0,212,170,0.1);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);animation:orbitSlow 40s linear infinite}
+.phone-orbit::before{content:'';position:absolute;top:-4px;left:50%;width:8px;height:8px;background:var(--accent);border-radius:50%;box-shadow:0 0 12px var(--accent)}
+.phone{width:280px;height:560px;background:#111827;border-radius:36px;padding:12px;box-shadow:0 40px 80px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.05);position:relative;z-index:2;animation:float 6s ease-in-out infinite,glowPulse 4s ease-in-out infinite}
+.phone-screen{width:100%;height:100%;background:#075e54;border-radius:26px;overflow:hidden;display:flex;flex-direction:column}
+.phone-header{background:#128c7e;padding:12px 16px;display:flex;align-items:center;gap:10px}
+.phone-header .avatar{width:32px;height:32px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:var(--primary)}
+.phone-header .name{font-size:14px;font-weight:600;color:white}
+.phone-header .status{font-size:11px;color:rgba(255,255,255,0.6)}
+.phone-chat{flex:1;padding:16px;display:flex;flex-direction:column;gap:8px;background:#0b141a;overflow:hidden}
+.chat-msg{max-width:85%;padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;opacity:0;animation:fadeUp 0.5s ease forwards}
+.chat-msg.bot{background:#1f2c34;color:#e2e8f0;border-bottom-left-radius:4px;align-self:flex-start}
+.chat-msg.user{background:#005c4b;color:white;border-bottom-right-radius:4px;align-self:flex-end}
+.chat-msg:nth-child(1){animation-delay:0.8s}
+.chat-msg:nth-child(2){animation-delay:2s}
+.chat-msg:nth-child(3){animation-delay:3.5s}
+.chat-msg:nth-child(4){animation-delay:5s}
+.chat-msg:nth-child(5){animation-delay:6.5s}
+.chat-time{font-size:10px;color:rgba(255,255,255,0.35);margin-top:2px;text-align:right}
+.chat-msg.bot .chat-time{text-align:left}
+.typing{display:flex;gap:4px;padding:10px 14px;background:#1f2c34;border-radius:12px;border-bottom-left-radius:4px;align-self:flex-start;opacity:0;animation:fadeUp 0.5s ease 8s forwards}
+.typing span{width:6px;height:6px;background:#64748b;border-radius:50%;animation:pulse 1.4s infinite}
+.typing span:nth-child(2){animation-delay:0.2s}
+.typing span:nth-child(3){animation-delay:0.4s}
+
+/* ========== PAIN STATS BAR ========== */
+.pain-bar{background:linear-gradient(135deg,var(--bg-section),#0f1e36);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.pain-bar .container{padding:48px 24px}
+.pain-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.pain-stat{text-align:center;padding:0 32px;position:relative}
+.pain-stat:not(:last-child)::after{content:'';position:absolute;right:0;top:10%;height:80%;width:1px;background:var(--border)}
+.pain-stat .number{font-size:clamp(32px,4vw,48px);font-weight:900;margin-bottom:8px}
+.pain-stat .number.loss{color:var(--orange)}
+.pain-stat .number.warn{color:#fbbf24}
+.pain-stat .number.good{color:var(--accent)}
+.pain-stat .desc{font-size:14px;color:var(--text-muted);max-width:200px;margin:0 auto}
+
+/* ========== PROBLEM / SOLUTION ========== */
+.problem-solution{background:var(--bg-dark)}
+.ps-grid{display:grid;grid-template-columns:1fr 48px 1fr;gap:0;align-items:stretch}
+.ps-card{padding:40px;border-radius:var(--radius);position:relative;overflow:hidden}
+.ps-card.problem{background:linear-gradient(135deg,#1a0a0a,#2d1515);border:1px solid rgba(255,107,53,0.15)}
+.ps-card.solution{background:linear-gradient(135deg,#0a1a15,#0f2d20);border:1px solid rgba(0,212,170,0.15)}
+.ps-arrow{display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--text-muted)}
+.ps-card h3{font-size:22px;font-weight:800;margin-bottom:24px}
+.ps-card.problem h3{color:var(--orange)}
+.ps-card.solution h3{color:var(--accent)}
+.ps-item{display:flex;gap:14px;margin-bottom:20px}
+.ps-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.ps-card.problem .ps-icon{background:rgba(255,107,53,0.1)}
+.ps-card.solution .ps-icon{background:rgba(0,212,170,0.1)}
+.ps-item strong{display:block;font-size:15px;color:var(--text-primary);margin-bottom:4px}
+.ps-item p{font-size:13px;color:var(--text-secondary);line-height:1.6}
+
+/* ========== HOW IT WORKS ========== */
+.how-it-works{background:var(--bg-section);position:relative}
+.how-it-works::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,212,170,0.2),transparent)}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px;counter-reset:step}
+.step-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:40px 32px;position:relative;transition:var(--transition);overflow:hidden}
+.step-card::before{content:counter(step);counter-increment:step;position:absolute;top:20px;right:24px;font-size:72px;font-weight:900;color:rgba(0,212,170,0.06);line-height:1}
+.step-card:hover{border-color:rgba(0,212,170,0.2);transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,0.2)}
+.step-icon{width:56px;height:56px;border-radius:14px;background:rgba(0,212,170,0.1);display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:20px}
+.step-card h3{font-size:18px;font-weight:700;color:white;margin-bottom:10px}
+.step-card p{font-size:14px;color:var(--text-secondary);line-height:1.7}
+.step-connector{display:flex;align-items:center;justify-content:center;position:relative}
+.step-connector::before{content:'';position:absolute;top:50%;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(0,212,170,0.3),transparent)}
+
+/* ========== CALCULATOR ========== */
+.calculator-section{background:var(--bg-dark);position:relative}
+.calc-wrapper{background:linear-gradient(135deg,var(--bg-card),#0c2240);border:1px solid var(--border);border-radius:24px;padding:48px;max-width:900px;margin:48px auto 0;position:relative;overflow:hidden}
+.calc-wrapper::before{content:'';position:absolute;top:-100px;right:-100px;width:300px;height:300px;background:radial-gradient(circle,rgba(0,212,170,0.06),transparent);pointer-events:none}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.calc-inputs label{display:block;font-size:13px;font-weight:600;color:var(--text-secondary);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px}
+.calc-inputs .input-group{margin-bottom:24px}
+.calc-inputs input[type="range"]{-webkit-appearance:none;width:100%;height:6px;border-radius:3px;background:var(--primary-light);outline:none;cursor:pointer}
+.calc-inputs input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--accent);cursor:pointer;box-shadow:0 0 12px rgba(0,212,170,0.4)}
+.calc-inputs .value-display{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.calc-inputs .current-val{font-size:24px;font-weight:800;color:white}
+.calc-results{background:rgba(0,0,0,0.2);border-radius:var(--radius);padding:32px}
+.calc-results h3{font-size:16px;font-weight:600;color:var(--text-muted);margin-bottom:24px;text-transform:uppercase;letter-spacing:1px}
+.result-item{margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border)}
+.result-item:last-of-type{border-bottom:none;margin-bottom:16px}
+.result-label{font-size:13px;color:var(--text-muted);margin-bottom:4px}
+.result-value{font-size:32px;font-weight:900}
+.result-value.loss{color:var(--orange)}
+.result-value.save{color:var(--accent)}
+.result-sub{font-size:12px;color:var(--text-muted);margin-top:4px}
+.calc-cta{width:100%;padding:16px;background:var(--accent);color:var(--primary);font-weight:700;font-size:16px;border:none;border-radius:100px;cursor:pointer;transition:var(--transition)}
+.calc-cta:hover{background:white;box-shadow:0 8px 24px rgba(0,212,170,0.3)}
+
+/* ========== FEATURES ========== */
+.features{background:var(--bg-section)}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.feature-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:var(--transition);position:relative;overflow:hidden}
+.feature-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent);opacity:0;transition:var(--transition)}
+.feature-card:hover{border-color:rgba(0,212,170,0.15);transform:translateY(-4px);box-shadow:0 16px 32px rgba(0,0,0,0.2)}
+.feature-card:hover::after{opacity:1}
+.feature-icon{width:48px;height:48px;border-radius:12px;background:rgba(0,212,170,0.1);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:16px}
+.feature-card h3{font-size:16px;font-weight:700;color:white;margin-bottom:8px}
+.feature-card p{font-size:14px;color:var(--text-secondary);line-height:1.6}
+
+/* ========== PRICING ========== */
+.pricing{background:var(--bg-dark)}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.price-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:40px 32px;transition:var(--transition);position:relative}
+.price-card.popular{border-color:var(--accent);background:linear-gradient(135deg,#0a2e3f,#0f2d20)}
+.price-card.popular::before{content:'Meest gekozen';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--primary);font-size:12px;font-weight:700;padding:4px 16px;border-radius:100px}
+.price-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(0,0,0,0.3)}
+.price-name{font-size:18px;font-weight:700;color:white;margin-bottom:8px}
+.price-desc{font-size:14px;color:var(--text-muted);margin-bottom:24px}
+.price-amount{font-size:48px;font-weight:900;color:white;margin-bottom:4px}
+.price-amount span{font-size:16px;font-weight:500;color:var(--text-muted)}
+.price-period{font-size:13px;color:var(--text-muted);margin-bottom:32px}
+.price-features{margin-bottom:32px}
+.price-features li{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:14px;color:var(--text-secondary)}
+.price-features li::before{content:'✓';color:var(--accent);font-weight:700}
+.price-btn{width:100%;padding:14px;border-radius:100px;font-weight:700;font-size:15px;cursor:pointer;transition:var(--transition);border:none}
+.price-card .price-btn{background:transparent;color:white;border:1px solid var(--border)}
+.price-card .price-btn:hover{border-color:var(--accent);color:var(--accent)}
+.price-card.popular .price-btn{background:var(--accent);color:var(--primary)}
+.price-card.popular .price-btn:hover{background:white;box-shadow:0 8px 24px rgba(0,212,170,0.3)}
+
+/* ========== FAQ ========== */
+.faq{background:var(--bg-section)}
+.faq-list{max-width:720px;margin:48px auto 0}
+.faq-item{border-bottom:1px solid var(--border);overflow:hidden}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:24px 0;cursor:pointer;transition:var(--transition)}
+.faq-q h3{font-size:16px;font-weight:600;color:var(--text-primary);transition:var(--transition)}
+.faq-q:hover h3{color:var(--accent)}
+.faq-q .arrow{width:24px;height:24px;display:flex;align-items:center;justify-content:center;transition:transform 0.3s;color:var(--text-muted);flex-shrink:0}
+.faq-item.open .arrow{transform:rotate(180deg);color:var(--accent)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.4s ease}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:24px}
+.faq-a p{font-size:14px;color:var(--text-secondary);line-height:1.7}
+
+/* ========== CTA SECTION ========== */
+.cta-section{background:var(--bg-dark);position:relative;overflow:hidden}
+.cta-box{background:linear-gradient(135deg,#0a2e3f,var(--primary-light));border:1px solid rgba(0,212,170,0.15);border-radius:24px;padding:80px;text-align:center;position:relative;overflow:hidden}
+.cta-box::before{content:'';position:absolute;top:-150px;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(0,212,170,0.08),transparent);pointer-events:none}
+.cta-box h2{font-size:clamp(28px,4vw,42px);font-weight:800;color:white;margin-bottom:16px;position:relative;z-index:1}
+.cta-box p{font-size:17px;color:var(--text-secondary);margin-bottom:36px;max-width:500px;margin-left:auto;margin-right:auto;position:relative;z-index:1}
+
+/* ========== FOOTER ========== */
+.footer{background:var(--bg-section);border-top:1px solid var(--border);padding:48px 0 24px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand .logo{font-size:20px;font-weight:800;color:white;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.footer-brand p{font-size:14px;color:var(--text-muted);line-height:1.6;max-width:280px}
+.footer-col h4{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text-secondary);margin-bottom:16px}
+.footer-col a{display:block;font-size:14px;color:var(--text-muted);padding:6px 0;transition:var(--transition)}
+.footer-col a:hover{color:var(--accent)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--text-muted)}
+
+/* ========== RESPONSIVE ========== */
+@media(max-width:968px){
+  .hero-grid{grid-template-columns:1fr;text-align:center}
+  .hero-sub{margin:0 auto 36px}
+  .hero-ctas{justify-content:center}
+  .hero-stats{justify-content:center}
+  .phone-wrapper{margin-top:40px}
+  .ps-grid{grid-template-columns:1fr;gap:16px}
+  .ps-arrow{transform:rotate(90deg);padding:8px}
+  .steps-grid,.features-grid,.pricing-grid{grid-template-columns:1fr}
+  .pain-stats{grid-template-columns:1fr;gap:24px}
+  .pain-stat:not(:last-child)::after{display:none}
+  .calc-grid{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .cta-box{padding:48px 24px}
+}
+@media(max-width:640px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .section{padding:64px 0}
+  .hero{padding-top:80px;min-height:auto;padding-bottom:40px}
+  .calc-wrapper{padding:24px}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="nav">
-  <div class="nav-inner">
-    <a href="/" class="nav-logo">
-      <div class="logo-icon">S</div>
+<!-- ========== NAVIGATION ========== -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">
+      <div style="width:32px;height:32px;background:#00D4AA;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:#0B1D35;font-weight:800;">S</div>
       Skipless
     </a>
-    <button class="hamburger" aria-label="Menu">&#9776;</button>
-    <ul class="nav-links">
-      <li><a href="#calculator">Calculator</a></li>
-      <li><a href="#hoe-het-werkt">Hoe het werkt</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#prijzen">Prijzen</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="https://tally.so/r/lbW78W" class="nav-cta">Demo aanvragen</a></li>
-    </ul>
+    <div class="nav-links">
+      <a href="#calculator">Calculator</a>
+      <a href="#hoe-het-werkt">Hoe het werkt</a>
+      <a href="#features">Features</a>
+      <a href="#prijzen">Prijzen</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://tally.so/r/lbW78W" target="_blank" class="nav-cta">Demo aanvragen</a>
+    </div>
+    <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+      <span></span><span></span><span></span>
+    </div>
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div class="reveal">
-        <div class="hero-badge">
-          <span class="dot"></span>
-          Speciaal voor Lightspeed &amp; restaurants zonder systeem
-        </div>
-        <h1>Nooit meer<br>lege tafels door<br><span class="accent">no-shows</span></h1>
-        <p class="subtitle">Skipless stuurt automatisch slimme WhatsApp-herinneringen naar je gasten. Speciaal gebouwd voor restaurants met Lightspeed of zonder reserveringssysteem. Resultaat: tot 60% minder no-shows &mdash; zonder extra werk.</p>
-        <div class="hero-buttons">
-          <a href="#calculator" class="btn-primary">Bereken je verlies &darr;</a>
-          <a href="https://tally.so/r/lbW78W" class="btn-secondary">&#9655; Start gratis proefperiode</a>
-        </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="num" data-count="60">0</div>
-            <div class="label">% minder no-shows</div>
-          </div>
-          <div class="hero-stat">
-            <div class="num" data-count="92">0</div>
-            <div class="label">% NL op WhatsApp</div>
-          </div>
-          <div class="hero-stat">
-            <div class="num" data-count="1">0</div>
-            <div class="label">uur om op te zetten</div>
-          </div>
-        </div>
+<!-- ========== HERO ========== -->
+<section class="hero" id="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="dot"></span> Nu beschikbaar voor restaurants in Nederland</div>
+      <h1>Nooit meer<br>lege tafels door<br><span class="highlight">no-shows</span></h1>
+      <p class="hero-sub">Skipless voorspelt welke reserveringen niet komen opdagen en stuurt automatisch slimme WhatsApp-herinneringen. Resultaat: tot 60% minder no-shows — zonder extra werk.</p>
+      <div class="hero-ctas">
+        <a href="#calculator" class="btn-primary">Bereken je verlies <span>→</span></a>
+        <a href="https://tally.so/r/lbW78W" target="_blank" class="btn-secondary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Start gratis proefperiode
+        </a>
       </div>
-      <div class="reveal-right">
-        <div class="whatsapp-mock">
-          <div class="wa-header">
-            <div class="wa-avatar">S</div>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="num" data-count="60">0</span><span class="label">% minder no-shows</span></div>
+        <div class="hero-stat"><span class="num" data-count="92">0</span><span class="label">% NL op WhatsApp</span></div>
+        <div class="hero-stat"><span class="num" data-count="24">0</span><span class="label">uur om op te zetten</span></div>
+      </div>
+    </div>
+    <div class="phone-wrapper">
+      <div class="phone-orbit"></div>
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="phone-header">
+            <div class="avatar">S</div>
             <div>
-              <div class="wa-name">Skipless</div>
-              <div class="wa-status">online</div>
+              <div class="name">Skipless</div>
+              <div class="status">online</div>
             </div>
           </div>
-          <div class="wa-messages">
-            <div class="wa-msg incoming">Hoi Jan! &#128075; Je hebt morgen een reservering bij Bistro De Linde om 19:30 voor 4 personen.<div class="wa-time">14:32</div></div>
-            <div class="wa-msg incoming">Klopt het dat jullie nog steeds komen?<div class="wa-time">14:32</div></div>
-            <div class="wa-msg outgoing">Ja we komen! Maar kan het 20:00 worden ipv 19:30?<div class="wa-time">14:45</div></div>
-            <div class="wa-msg incoming">Top! Ik heb je reservering aangepast naar 20:00. Tot morgen! &#127869;<div class="wa-time">14:45</div></div>
-            <div class="wa-msg outgoing">Perfect, bedankt! &#128515;<div class="wa-time">14:46</div></div>
+          <div class="phone-chat">
+            <div class="chat-msg bot">
+              Hoi Jan! 👋 Je hebt morgen een reservering bij Bistro De Linde om 19:30 voor 4 personen.
+              <div class="chat-time">14:32</div>
+            </div>
+            <div class="chat-msg bot">
+              Klopt het dat jullie nog steeds komen?
+              <div class="chat-time">14:32</div>
+            </div>
+            <div class="chat-msg user">
+              Ja we komen! Maar kan het 20:00 worden ipv 19:30?
+              <div class="chat-time">14:45</div>
+            </div>
+            <div class="chat-msg bot">
+              Top! Ik heb je reservering aangepast naar 20:00. Tot morgen! 🍽️
+              <div class="chat-time">14:45</div>
+            </div>
+            <div class="chat-msg user">
+              Perfect, bedankt! 👍
+              <div class="chat-time">14:46</div>
+            </div>
+            <div class="typing">
+              <span></span><span></span><span></span>
+            </div>
           </div>
         </div>
       </div>
@@ -310,205 +395,205 @@ footer{background:var(--bg-section);border-top:1px solid var(--border);padding:6
   </div>
 </section>
 
-<!-- VOOR WIE â TWO SEGMENTS -->
-<section class="segments" id="voor-wie">
+<!-- ========== PAIN STATS ========== -->
+<section class="pain-bar">
   <div class="container">
-    <div class="section-label reveal">Voor wie is Skipless?</div>
-    <h2 class="section-title reveal">Twee situaties, &eacute;&eacute;n oplossing</h2>
-    <p class="section-subtitle reveal">De meeste reserveringssystemen bieden al ingebouwde herinneringen. Maar als je Lightspeed gebruikt of helemaal geen systeem hebt, vallen gasten tussen wal en schip. D&aacute;&aacute;r komt Skipless.</p>
-    <div class="segment-cards">
-      <div class="segment-card reveal-left">
-        <div class="tag">&#9889; Lightspeed Restaurant</div>
-        <h3>Je gebruikt Lightspeed maar mist no-show preventie</h3>
-        <p>Lightspeed is fantastisch voor je kassasysteem, maar biedt geen automatische herinneringen aan gasten. Skipless vult dat gat: wij koppelen direct met Lightspeed en sturen WhatsApp-herinneringen naar je gasten.</p>
-        <ul>
-          <li>Directe koppeling met Lightspeed Restaurant</li>
-          <li>Automatische WhatsApp-herinneringen</li>
-          <li>AI risico-analyse op elke reservering</li>
-          <li>Setup binnen 24 uur</li>
-        </ul>
-        <a href="/lightspeed" class="card-cta">Meer over Skipless + Lightspeed &rarr;</a>
+    <div class="pain-stats">
+      <div class="pain-stat reveal">
+        <div class="number loss">€15.000+</div>
+        <div class="desc">Gemiddeld verlies per restaurant per jaar door no-shows</div>
       </div>
-      <div class="segment-card reveal-right">
-        <div class="tag">&#128221; Geen reserveringssysteem</div>
-        <h3>Je werkt met pen &amp; papier of Excel</h3>
-        <p>Veel restaurants nemen reserveringen aan via telefoon, WhatsApp of hun eigen website &mdash; zonder systeem erachter. Skipless geeft je de voordelen van een systeem zonder de kosten of complexiteit.</p>
-        <ul>
-          <li>Geen duur reserveringssysteem nodig</li>
-          <li>Wij sturen herinneringen via WhatsApp</li>
-          <li>Eenvoudige koppeling via je reserveringslijst</li>
-          <li>Direct inzetbaar, geen technische kennis nodig</li>
-        </ul>
-        <a href="/geen-reserveringssysteem" class="card-cta">Meer voor restaurants zonder systeem &rarr;</a>
+      <div class="pain-stat reveal delay-2">
+        <div class="number warn">1 op 6</div>
+        <div class="desc">reserveringen is een no-show in de Nederlandse horeca</div>
+      </div>
+      <div class="pain-stat reveal delay-4">
+        <div class="number good">92,9%</div>
+        <div class="desc">van Nederland gebruikt WhatsApp — het kanaal dat wél werkt</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SOCIAL PROOF STATS -->
-<section class="social-proof">
+<!-- ========== PROBLEM / SOLUTION ========== -->
+<section class="problem-solution section">
   <div class="container">
-    <div class="proof-grid reveal">
-      <div class="proof-item">
-        <div class="big">&euro;15.000+</div>
-        <p>Gemiddeld verlies per restaurant per jaar door no-shows</p>
-      </div>
-      <div class="proof-item">
-        <div class="big">1 op 6</div>
-        <p>reserveringen is een no-show in de Nederlandse horeca</p>
-      </div>
-      <div class="proof-item">
-        <div class="big">92,9%</div>
-        <p>van Nederland gebruikt WhatsApp &mdash; het kanaal dat w&eacute;l werkt</p>
-      </div>
+    <div class="text-center" style="margin-bottom:48px">
+      <span class="section-label">Waarom Skipless</span>
+      <h2 class="section-title">Van probleem naar oplossing</h2>
     </div>
-  </div>
-</section>
-
-<!-- PROBLEEM / OPLOSSING -->
-<section class="problem-solution" id="waarom">
-  <div class="container">
-    <div class="section-label reveal">Waarom Skipless</div>
-    <h2 class="section-title reveal">Van probleem naar oplossing</h2>
-    <div class="ps-grid" style="margin-top:48px">
-      <div class="ps-column reveal-left">
-        <h2 style="color:#ff6b6b">&#10060; Het probleem</h2>
-        <div class="ps-card">
-          <div class="icon">&#128184;</div>
-          <h4>Duizenden euro's verlies</h4>
-          <p>Lege tafels kosten je gemiddeld &euro;15.000+ per jaar. Eten is al ingekocht, personeel staat klaar &mdash; maar de gast komt niet.</p>
+    <div class="ps-grid">
+      <div class="ps-card problem reveal-left">
+        <h3>❌ Het probleem</h3>
+        <div class="ps-item">
+          <div class="ps-icon">💸</div>
+          <div>
+            <strong>Duizenden euro's verlies</strong>
+            <p>Lege tafels kosten je gemiddeld €15.000+ per jaar. Eten is al ingekocht, personeel staat klaar — maar de gast komt niet.</p>
+          </div>
         </div>
-        <div class="ps-card">
-          <div class="icon">&#128222;</div>
-          <h4>Handmatig bellen werkt niet</h4>
-          <p>Wie heeft er tijd om elke gast na te bellen? Je team is druk genoeg. En gasten nemen toch niet op.</p>
+        <div class="ps-item">
+          <div class="ps-icon">📞</div>
+          <div>
+            <strong>Handmatig bellen werkt niet</strong>
+            <p>Wie heeft er tijd om elke gast na te bellen? Je team is druk genoeg. En gasten nemen toch niet op.</p>
+          </div>
         </div>
-        <div class="ps-card">
-          <div class="icon">&#129300;</div>
-          <h4>Geen herinneringen zonder systeem</h4>
-          <p>Zonder reserveringssysteem heb je geen manier om gasten automatisch te herinneren. En Lightspeed biedt dit niet.</p>
+        <div class="ps-item">
+          <div class="ps-icon">📧</div>
+          <div>
+            <strong>SMS en e-mail worden genegeerd</strong>
+            <p>Open rates van 15-20%. Gasten zien je herinnering pas als het te laat is — of helemaal niet.</p>
+          </div>
         </div>
       </div>
-      <div class="ps-divider"></div>
-      <div class="ps-column solution reveal-right">
-        <h2 style="color:var(--accent)">&#10004; De oplossing</h2>
-        <div class="ps-card">
-          <div class="icon">&#129504;</div>
-          <h4>AI voorspelt risico</h4>
-          <p>Ons systeem analyseert elke reservering: groepsgrootte, tijdstip, dag en historie. Risicovolle boekingen krijgen extra aandacht.</p>
+      <div class="ps-arrow reveal">→</div>
+      <div class="ps-card solution reveal-right">
+        <h3>✅ De oplossing</h3>
+        <div class="ps-item">
+          <div class="ps-icon">🧠</div>
+          <div>
+            <strong>AI voorspelt risico</strong>
+            <p>Ons systeem analyseert elke reservering: groepsgrootte, tijdstip, dag en historie. Risicovolle boekingen krijgen extra aandacht.</p>
+          </div>
         </div>
-        <div class="ps-card">
-          <div class="icon">&#128172;</div>
-          <h4>WhatsApp op het juiste moment</h4>
-          <p>92% open rate. Persoonlijke, vriendelijke berichten via WhatsApp. Gasten reageren direct &mdash; geen gedoe.</p>
+        <div class="ps-item">
+          <div class="ps-icon">💬</div>
+          <div>
+            <strong>WhatsApp herinnering op het juiste moment</strong>
+            <p>92% open rate. Persoonlijke, vriendelijke berichten via WhatsApp. Gasten reageren direct — geen gedoe.</p>
+          </div>
         </div>
-        <div class="ps-card">
-          <div class="icon">&#128260;</div>
-          <h4>Automatische herbevestiging</h4>
-          <p>Gasten bevestigen met &eacute;&eacute;n berichtje. Annuleringen worden direct gemeld zodat je de tafel kunt hervullen.</p>
+        <div class="ps-item">
+          <div class="ps-icon">🔄</div>
+          <div>
+            <strong>Automatische herbevestiging</strong>
+            <p>Gasten bevestigen met één berichtje. Annuleringen worden direct gemeld zodat je de tafel kunt hervullen.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- HOE HET WERKT -->
-<section class="how-it-works" id="hoe-het-werkt">
+<!-- ========== HOW IT WORKS ========== -->
+<section class="how-it-works section" id="hoe-het-werkt">
   <div class="container">
-    <div class="section-label reveal">Simpel proces</div>
-    <h2 class="section-title reveal">Hoe Skipless werkt</h2>
-    <p class="section-subtitle reveal">Binnen 24 uur operationeel. Geen technische kennis nodig &mdash; wij regelen alles.</p>
-    <div class="steps">
-      <div class="step reveal">
-        <div class="step-num">1</div>
-        <div class="icon">&#128268;</div>
-        <h3>Wij koppelen met jouw situatie</h3>
-        <p>Gebruik je Lightspeed? Dan koppelen wij direct. Geen systeem? Dan integreren we met je reserveringslijst of telefoonboekingen. Setup duurt maximaal 24 uur.</p>
+    <div class="text-center">
+      <span class="section-label">Simpel proces</span>
+      <h2 class="section-title">Hoe Skipless werkt</h2>
+      <p class="section-sub mx-auto">Binnen 24 uur operationeel. Geen technische kennis nodig — wij regelen alles.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal delay-1">
+        <div class="step-icon">🔗</div>
+        <h3>Wij koppelen met je systeem</h3>
+        <p>Formitable, Resengo, Lightspeed, Eet.nu — we integreren met elk reserveringssysteem. Setup duurt maximaal 24 uur.</p>
       </div>
-      <div class="step reveal">
-        <div class="step-num">2</div>
-        <div class="icon">&#129504;</div>
+      <div class="step-card reveal delay-2">
+        <div class="step-icon">🧠</div>
         <h3>AI analyseert elk risico</h3>
         <p>Ons algoritme beoordeelt elke reservering op no-show risico. Factoren: groepsgrootte, dag, tijdstip, weer en boekingshistorie.</p>
       </div>
-      <div class="step reveal">
-        <div class="step-num">3</div>
-        <div class="icon">&#128172;</div>
+      <div class="step-card reveal delay-3">
+        <div class="step-icon">💬</div>
         <h3>Gasten krijgen WhatsApp</h3>
-        <p>Persoonlijke, vriendelijke herinneringen via WhatsApp. Gasten bevestigen of annuleren met &eacute;&eacute;n berichtje. Jij hoeft niks te doen.</p>
+        <p>Persoonlijke, vriendelijke herinneringen via WhatsApp. Gasten bevestigen of annuleren met één berichtje. Jij hoeft niks te doen.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CALCULATOR -->
-<section class="calculator" id="calculator">
+<!-- ========== CALCULATOR ========== -->
+<section class="calculator-section section" id="calculator">
   <div class="container">
-    <div class="calc-container reveal">
-      <h2>Hoeveel kosten no-shows jou?</h2>
-      <p class="calc-subtitle">Vul je cijfers in en zie direct wat je verliest &mdash; en wat je kunt besparen.</p>
-      <div class="slider-group">
-        <div class="slider-label"><span>Couverts per week</span><span class="value" id="covers-val">300</span></div>
-        <input type="range" id="covers" min="50" max="1000" value="300" step="10">
-      </div>
-      <div class="slider-group">
-        <div class="slider-label"><span>Gemiddelde besteding per gast</span><span class="value" id="spend-val">&euro;45</span></div>
-        <input type="range" id="spend" min="15" max="150" value="45" step="1">
-      </div>
-      <div class="slider-group">
-        <div class="slider-label"><span>No-shows per week</span><span class="value" id="noshow-val">8 gasten</span></div>
-        <input type="range" id="noshow" min="1" max="50" value="8" step="1">
-      </div>
-      <div class="calc-results">
-        <div class="calc-result">
-          <div class="amount loss" id="loss">&euro;18.720</div>
-          <div class="desc">Jaarlijks verlies door no-shows</div>
+    <div class="text-center">
+      <span class="section-label">Jouw verlies berekenen</span>
+      <h2 class="section-title">Hoeveel kosten no-shows jou?</h2>
+      <p class="section-sub mx-auto">Vul je cijfers in en zie direct wat je verliest — en wat je kunt besparen.</p>
+    </div>
+    <div class="calc-wrapper reveal">
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <div class="input-group">
+            <label>Couverts per week</label>
+            <input type="range" id="covers" min="50" max="1000" value="300" step="10">
+            <div class="value-display">
+              <span class="current-val" id="covers-val">300</span>
+              <span style="color:var(--text-muted);font-size:12px">50 — 1000</span>
+            </div>
+          </div>
+          <div class="input-group">
+            <label>Gemiddelde besteding per gast</label>
+            <input type="range" id="spend" min="15" max="150" value="45" step="5">
+            <div class="value-display">
+              <span class="current-val" id="spend-val">€45</span>
+              <span style="color:var(--text-muted);font-size:12px">€15 — €150</span>
+            </div>
+          </div>
+          <div class="input-group">
+            <label>No-shows per week</label>
+            <input type="range" id="noshow" min="1" max="50" value="8" step="1">
+            <div class="value-display">
+              <span class="current-val" id="noshow-val">8 gasten</span>
+              <span style="color:var(--text-muted);font-size:12px">1 — 50 gasten</span>
+            </div>
+          </div>
         </div>
-        <div class="calc-result">
-          <div class="amount save" id="savings">&euro;11.232</div>
-          <div class="desc">Besparing met Skipless (60% reductie)</div>
+        <div class="calc-results">
+          <h3>Jouw resultaten</h3>
+          <div class="result-item">
+            <div class="result-label">Jaarlijks verlies door no-shows</div>
+            <div class="result-value loss" id="loss">€84.240</div>
+            <div class="result-sub">Dat is geld dat je al hebt uitgegeven</div>
+          </div>
+          <div class="result-item">
+            <div class="result-label">Besparing met Skipless (60% reductie)</div>
+            <div class="result-value save" id="savings">€50.544</div>
+            <div class="result-sub">Direct terug in je omzet</div>
+          </div>
+          <a href="https://tally.so/r/lbW78W" target="_blank" class="calc-cta" style="display:block;text-align:center;text-decoration:none;">Claim je besparing →</a>
         </div>
-      </div>
-      <div class="calc-cta">
-        <a href="https://tally.so/r/lbW78W" class="btn-primary" style="margin-top:12px">Claim je besparing &rarr;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FEATURES -->
-<section class="features" id="features">
+<!-- ========== FEATURES ========== -->
+<section class="features section" id="features">
   <div class="container">
-    <div class="section-label reveal">Alles inbegrepen</div>
-    <h2 class="section-title reveal">Wat je krijgt met Skipless</h2>
-    <div class="feature-grid">
-      <div class="feature-card reveal">
-        <div class="icon">&#129504;</div>
+    <div class="text-center">
+      <span class="section-label">Alles inbegrepen</span>
+      <h2 class="section-title">Wat je krijgt met Skipless</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal delay-1">
+        <div class="feature-icon">🧠</div>
         <h3>AI Risico Score</h3>
-        <p>Elke reservering krijgt een risicoscore. Hoog risico? Extra herinneringen. Laag risico? &Eacute;&eacute;n vriendelijk berichtje.</p>
+        <p>Elke reservering krijgt een risicoscore. Hoog risico? Extra herinneringen. Laag risico? Één vriendelijk berichtje.</p>
       </div>
-      <div class="feature-card reveal">
-        <div class="icon">&#128172;</div>
+      <div class="feature-card reveal delay-2">
+        <div class="feature-icon">💬</div>
         <h3>WhatsApp Herinneringen</h3>
         <p>Automatische, persoonlijke berichten via WhatsApp. 92% open rate. Gasten reageren direct.</p>
       </div>
-      <div class="feature-card reveal">
-        <div class="icon">&#10004;</div>
+      <div class="feature-card reveal delay-3">
+        <div class="feature-icon">✅</div>
         <h3>Herbevestiging</h3>
-        <p>Gasten bevestigen met &eacute;&eacute;n tik. Bij annulering weet je het direct &mdash; genoeg tijd om de tafel te hervullen.</p>
+        <p>Gasten bevestigen met één tik. Bij annulering weet je het direct — genoeg tijd om de tafel te hervullen.</p>
       </div>
-      <div class="feature-card reveal">
-        <div class="icon">&#128200;</div>
+      <div class="feature-card reveal delay-1">
+        <div class="feature-icon">📊</div>
         <h3>Live Dashboard</h3>
         <p>Real-time overzicht van alle reserveringen, risicoscores, bevestigingen en besparingen. Altijd inzicht.</p>
       </div>
-      <div class="feature-card reveal">
-        <div class="icon">&#9889;</div>
+      <div class="feature-card reveal delay-2">
+        <div class="feature-icon">⚡</div>
         <h3>24 Uur Setup</h3>
-        <p>Geen maandenlange implementatie. Wij koppelen met Lightspeed of jouw reserveringslijst binnen &eacute;&eacute;n werkdag.</p>
+        <p>Geen maandenlange implementatie. Wij koppelen met je systeem binnen één werkdag. Jij hoeft niks te installeren.</p>
       </div>
-      <div class="feature-card reveal">
-        <div class="icon">&#128274;</div>
+      <div class="feature-card reveal delay-3">
+        <div class="feature-icon">🔒</div>
         <h3>GDPR Compliant</h3>
         <p>Alle data wordt verwerkt volgens de AVG. Gastgegevens worden versleuteld opgeslagen op Europese servers.</p>
       </div>
@@ -516,134 +601,145 @@ footer{background:var(--bg-section);border-top:1px solid var(--border);padding:6
   </div>
 </section>
 
-<!-- PRICING -->
-<section class="pricing" id="prijzen">
+<!-- ========== PRICING ========== -->
+<section class="pricing section" id="prijzen">
   <div class="container">
-    <div class="section-label reveal">Transparante prijzen</div>
-    <h2 class="section-title reveal">Investeer minder dan &eacute;&eacute;n no-show kost</h2>
-    <p class="section-subtitle reveal">Geen verborgen kosten. Geen lange contracten. Maandelijks opzegbaar.</p>
+    <div class="text-center">
+      <span class="section-label">Transparante prijzen</span>
+      <h2 class="section-title">Investeer minder dan één no-show kost</h2>
+      <p class="section-sub mx-auto">Geen verborgen kosten. Geen lange contracten. Maandelijks opzegbaar.</p>
+    </div>
     <div class="pricing-grid">
-      <div class="pricing-card reveal">
-        <div class="plan-name">Starter</div>
-        <div class="plan-desc">Voor kleinere restaurants</div>
-        <div class="price">&euro;29 <span>/mnd</span></div>
-        <div class="price-note">Excl. BTW &middot; Maandelijks opzegbaar</div>
-        <ul>
+      <div class="price-card reveal delay-1">
+        <div class="price-name">Starter</div>
+        <div class="price-desc">Voor kleinere restaurants</div>
+        <div class="price-amount">€29 <span>/mnd</span></div>
+        <div class="price-period">Excl. BTW · Maandelijks opzegbaar</div>
+        <ul class="price-features">
           <li>Tot 200 couverts per week</li>
           <li>WhatsApp herinneringen</li>
           <li>Basis dashboard</li>
           <li>E-mail support</li>
         </ul>
-        <a href="https://tally.so/r/lbW78W" class="pricing-btn outline">Start gratis proefperiode</a>
+        <a href="https://tally.so/r/lbW78W?pakket=starter" target="_blank" class="price-btn" style="display:block;text-align:center;text-decoration:none;">Start gratis proefperiode</a>
       </div>
-      <div class="pricing-card featured reveal">
-        <div class="plan-name">Groei</div>
-        <div class="plan-desc">Voor drukke restaurants</div>
-        <div class="price">&euro;59 <span>/mnd</span></div>
-        <div class="price-note">Excl. BTW &middot; Maandelijks opzegbaar</div>
-        <ul>
+      <div class="price-card popular reveal delay-2">
+        <div class="price-name">Groei</div>
+        <div class="price-desc">Voor drukke restaurants</div>
+        <div class="price-amount">€59 <span>/mnd</span></div>
+        <div class="price-period">Excl. BTW · Maandelijks opzegbaar</div>
+        <ul class="price-features">
           <li>Onbeperkt couverts</li>
           <li>AI risico-analyse</li>
           <li>Automatische herbevestiging</li>
           <li>Live dashboard</li>
           <li>Priority support</li>
         </ul>
-        <a href="https://tally.so/r/lbW78W" class="pricing-btn primary">Start gratis proefperiode</a>
+        <a href="https://tally.so/r/lbW78W?pakket=groei" target="_blank" class="price-btn" style="display:block;text-align:center;text-decoration:none;">Start gratis proefperiode</a>
       </div>
-      <div class="pricing-card reveal">
-        <div class="plan-name">Enterprise</div>
-        <div class="plan-desc">Meerdere locaties</div>
-        <div class="price" style="font-size:1.8rem;">Op maat</div>
-        <div class="price-note">Neem contact op voor een offerte</div>
-        <ul>
+      <div class="price-card reveal delay-3">
+        <div class="price-name">Enterprise</div>
+        <div class="price-desc">Meerdere locaties</div>
+        <div class="price-amount">Op maat</div>
+        <div class="price-period">Neem contact op voor een offerte</div>
+        <ul class="price-features">
           <li>Multi-locatie beheer</li>
           <li>API-toegang</li>
           <li>Custom integraties</li>
           <li>Dedicated account manager</li>
           <li>SLA garantie</li>
         </ul>
-        <a href="https://tally.so/r/PdYPLe" class="pricing-btn outline">Neem contact op</a>
+        <a href="https://calendly.com/alwaysbooked/alwaysbooked-intake-en-set-up" target="_blank" class="price-btn" style="display:block;text-align:center;text-decoration:none;">Neem contact op</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="faq" id="faq">
+<!-- ========== FAQ ========== -->
+<section class="faq section" id="faq">
   <div class="container">
-    <div class="section-label reveal">Veelgestelde vragen</div>
-    <h2 class="section-title reveal">Alles wat je wilt weten</h2>
+    <div class="text-center">
+      <span class="section-label">Veelgestelde vragen</span>
+      <h2 class="section-title">Alles wat je wilt weten</h2>
+    </div>
     <div class="faq-list">
-      <div class="faq-item reveal">
+      <div class="faq-item">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>Hoe snel is Skipless opgezet?</span>
-          <span class="toggle">+</span>
+          <h3>Hoe snel is Skipless opgezet?</h3>
+          <div class="arrow">▼</div>
         </div>
-        <div class="faq-a">Binnen 24 uur. Wij koppelen met Lightspeed of je reserveringslijst, stellen de WhatsApp-berichten in en testen alles. Jij hoeft niks technisch te doen &mdash; wij regelen het complete onboarding-proces.</div>
+        <div class="faq-a"><p>Binnen 24 uur. Wij koppelen met je reserveringssysteem, stellen de WhatsApp-berichten in en testen alles. Jij hoeft niks technisch te doen — wij regelen het complete onboarding-proces.</p></div>
       </div>
-      <div class="faq-item reveal">
+      <div class="faq-item">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>Ik gebruik Lightspeed Restaurant. Hoe werkt de koppeling?</span>
-          <span class="toggle">+</span>
+          <h3>Werkt het met mijn reserveringssysteem?</h3>
+          <div class="arrow">▼</div>
         </div>
-        <div class="faq-a">We koppelen direct met je Lightspeed Restaurant omgeving. Reserveringen worden automatisch gesynchroniseerd, en wij sturen de herinneringen via WhatsApp. Lightspeed biedt zelf geen no-show herinneringen &mdash; Skipless vult dat gat precies.</div>
+        <div class="faq-a"><p>Ja. Skipless werkt met Formitable, Resengo, Lightspeed, Eet.nu en vrijwel elk ander reserveringssysteem in Nederland. Gebruik je iets anders? Neem contact op — we koppelen het binnen een dag.</p></div>
       </div>
-      <div class="faq-item reveal">
+      <div class="faq-item">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>Ik heb geen reserveringssysteem. Kan ik Skipless toch gebruiken?</span>
-          <span class="toggle">+</span>
+          <h3>Wat kost het als een gast geen WhatsApp heeft?</h3>
+          <div class="arrow">▼</div>
         </div>
-        <div class="faq-a">Absoluut! Veel van onze klanten werken met pen &amp; papier, Excel of nemen telefonisch reserveringen aan. Wij bieden een simpele manier om je reserveringen door te geven &mdash; en de rest doen wij. Geen duur systeem nodig.</div>
+        <div class="faq-a"><p>92,9% van Nederland gebruikt WhatsApp. Voor de zeldzame gast zonder WhatsApp kan er een SMS-fallback worden ingesteld. Dit bespreken we tijdens de setup zodat je nooit een gast mist.</p></div>
       </div>
-      <div class="faq-item reveal">
+      <div class="faq-item">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>Wat kost het als een gast geen WhatsApp heeft?</span>
-          <span class="toggle">+</span>
+          <h3>Is het GDPR/AVG-compliant?</h3>
+          <div class="arrow">▼</div>
         </div>
-        <div class="faq-a">92,9% van Nederland gebruikt WhatsApp. Voor de zeldzame gast zonder WhatsApp kan er een SMS-fallback worden ingesteld. Dit bespreken we tijdens de setup zodat je nooit een gast mist.</div>
+        <div class="faq-a"><p>Absoluut. Alle gastgegevens worden verwerkt volgens de AVG, opgeslagen op Europese servers en versleuteld. Gasten kunnen op elk moment hun gegevens laten verwijderen. We leveren een verwerkersovereenkomst mee.</p></div>
       </div>
-      <div class="faq-item reveal">
+      <div class="faq-item">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>Is het GDPR/AVG-compliant?</span>
-          <span class="toggle">+</span>
+          <h3>Hoe persoonlijk zijn de WhatsApp-berichten?</h3>
+          <div class="arrow">▼</div>
         </div>
-        <div class="faq-a">Absoluut. Alle gastgegevens worden verwerkt volgens de AVG, opgeslagen op Europese servers en versleuteld. Gasten kunnen op elk moment hun gegevens laten verwijderen. We leveren een verwerkersovereenkomst mee.</div>
+        <div class="faq-a"><p>Zeer persoonlijk. Elk bericht bevat de naam van de gast, het tijdstip, het aantal personen en de naam van je restaurant. Het voelt als een bericht van een medewerker — niet als een robot.</p></div>
       </div>
-      <div class="faq-item reveal">
+      <div class="faq-item">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>Kan ik het maandelijks opzeggen?</span>
-          <span class="toggle">+</span>
+          <h3>Kan ik het maandelijks opzeggen?</h3>
+          <div class="arrow">▼</div>
         </div>
-        <div class="faq-a">Ja. Geen jaarcontract, geen opzegtermijn. Je kunt elk moment stoppen. We geloven dat je blijft omdat het werkt, niet omdat je vastzit aan een contract.</div>
+        <div class="faq-a"><p>Ja. Geen jaarcontract, geen opzegtermijn. Je kunt elk moment stoppen. We geloven dat je blijft omdat het werkt, niet omdat je vastzit aan een contract.</p></div>
       </div>
-      <div class="faq-item reveal">
+      <div class="faq-item">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-          <span>Hoeveel minder no-shows kan ik verwachten?</span>
-          <span class="toggle">+</span>
+          <h3>Hoeveel minder no-shows kan ik verwachten?</h3>
+          <div class="arrow">▼</div>
         </div>
-        <div class="faq-a">Gemiddeld 60% reductie. Dit varieert per restaurant &mdash; factoren zijn je huidige no-show percentage, type gasten en seizoen. We monitoren je resultaten en optimaliseren continu.</div>
+        <div class="faq-a"><p>Gemiddeld 60% reductie. Dit varieert per restaurant — factoren zijn je huidige no-show percentage, type gasten en seizoen. We monitoren je resultaten en optimaliseren continu.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="final-cta">
-  <div class="container reveal">
-    <h2>Klaar om no-shows te stoppen?</h2>
-    <p>Start vandaag nog met Skipless en zie binnen een week de eerste resultaten. Geen risico &mdash; eerste maand gratis.</p>
-    <a href="https://tally.so/r/lbW78W" class="btn-primary">Vraag je gratis demo aan &rarr;</a>
-    <div class="meta">Setup binnen 24 uur &middot; Maandelijks opzegbaar</div>
+<!-- ========== CTA ========== -->
+<section class="cta-section section" id="demo">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2>Klaar om no-shows te stoppen?</h2>
+      <p>Start vandaag nog met Skipless en zie binnen een week de eerste resultaten. Geen risico — eerste maand gratis.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+        <a href="https://tally.so/r/lbW78W" target="_blank" class="btn-primary" style="font-size:18px;padding:18px 48px">Vraag je gratis demo aan →</a>
+      </div>
+      <p style="font-size:13px;color:var(--text-muted);margin-top:16px;margin-bottom:0">Setup binnen 24 uur · Maandelijks opzegbaar</p>
+    </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo"><div class="logo-icon">S</div> Skipless</div>
-        <p>AI-gedreven no-show preventie voor de Nederlandse horeca. Speciaal voor Lightspeed-restaurants en restaurants zonder reserveringssysteem. Een product van AlwaysBooked.</p>
+        <div class="logo">
+          <div style="width:28px;height:28px;background:#00D4AA;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:14px;color:#0B1D35;font-weight:800;">S</div>
+          Skipless
+        </div>
+        <p>AI-gedreven no-show preventie voor de Nederlandse horeca. Een product van AlwaysBooked.</p>
       </div>
       <div class="footer-col">
         <h4>Product</h4>
@@ -653,46 +749,49 @@ footer{background:var(--bg-section);border-top:1px solid var(--border);padding:6
         <a href="#calculator">Calculator</a>
       </div>
       <div class="footer-col">
-        <h4>Oplossingen</h4>
-        <a href="/lightspeed">Lightspeed Restaurant</a>
-        <a href="/geen-reserveringssysteem">Zonder systeem</a>
-        <a href="/blog.html">Blog</a>
-        <a href="/no-show-gids.html">No-show gids</a>
+        <h4>Resources</h4>
+        <a href="blog.html">Blog</a>
+        <a href="case-studies.html">Case studies</a>
+        <a href="no-show-gids.html">No-show gids</a>
+        <a href="help-center.html">Help center</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
         <a href="mailto:info@alwaysbooked.nl">info@alwaysbooked.nl</a>
-        <a href="https://linkedin.com/company/skipless" target="_blank">LinkedIn</a>
-        <a href="https://instagram.com/skipless.nl" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/in/rogierpeterss/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/alwaysbookedteam/" target="_blank">Instagram</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Skipless &mdash; Een product van AlwaysBooked. Alle rechten voorbehouden.</span>
-      <span>
-        <a href="/privacy-policy.html">Privacy Policy</a> &middot;
-        <a href="/algemene-voorwaarden.html">Algemene Voorwaarden</a>
-      </span>
+      <span>© 2026 Skipless — Een product van AlwaysBooked. Alle rechten voorbehouden.</span>
+      <div style="display:flex;gap:24px">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="algemene-voorwaarden.html">Algemene Voorwaarden</a>
+      </div>
     </div>
   </div>
 </footer>
 
+<!-- ========== JAVASCRIPT ========== -->
 <script>
-// NAV SCROLL
+// ---- NAV SCROLL ----
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// REVEAL ON SCROLL
+// ---- REVEAL ON SCROLL (Intersection Observer) ----
 const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('visible');
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
   });
 }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 reveals.forEach(el => revealObserver.observe(el));
 
-// COUNTER ANIMATION
+// ---- COUNTER ANIMATION ----
 const counters = document.querySelectorAll('.hero-stat .num');
 const counterObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -703,8 +802,12 @@ const counterObserver = new IntersectionObserver((entries) => {
       const step = target / 40;
       const timer = setInterval(() => {
         current += step;
-        if (current >= target) { el.textContent = target; clearInterval(timer); }
-        else { el.textContent = Math.floor(current); }
+        if (current >= target) {
+          el.textContent = target;
+          clearInterval(timer);
+        } else {
+          el.textContent = Math.floor(current);
+        }
       }, 30);
       counterObserver.unobserve(el);
     }
@@ -712,39 +815,59 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 counters.forEach(el => counterObserver.observe(el));
 
-// CALCULATOR
+// ---- CALCULATOR ----
 const coversSlider = document.getElementById('covers');
 const spendSlider = document.getElementById('spend');
 const noshowSlider = document.getElementById('noshow');
-function formatCurrency(n) { return '\u20AC' + n.toLocaleString('nl-NL'); }
+
+function formatCurrency(n) {
+  return '€' + n.toLocaleString('nl-NL');
+}
+
 function calculate() {
   const covers = parseInt(coversSlider.value);
   const spend = parseInt(spendSlider.value);
   const noshow = parseInt(noshowSlider.value);
+
   document.getElementById('covers-val').textContent = covers;
-  document.getElementById('spend-val').textContent = '\u20AC' + spend;
+  document.getElementById('spend-val').textContent = '€' + spend;
   document.getElementById('noshow-val').textContent = noshow + ' gasten';
+
   const weeklyLoss = noshow * spend;
   const yearlyLoss = weeklyLoss * 52;
   const yearlySavings = yearlyLoss * 0.6;
+
   document.getElementById('loss').textContent = formatCurrency(Math.round(yearlyLoss));
   document.getElementById('savings').textContent = formatCurrency(Math.round(yearlySavings));
+
+  // Animate the numbers
+  document.getElementById('loss').style.animation = 'none';
+  document.getElementById('savings').style.animation = 'none';
+  setTimeout(() => {
+    document.getElementById('loss').style.animation = 'countUp 0.3s ease';
+    document.getElementById('savings').style.animation = 'countUp 0.3s ease';
+  }, 10);
 }
+
 coversSlider.addEventListener('input', calculate);
 spendSlider.addEventListener('input', calculate);
 noshowSlider.addEventListener('input', calculate);
+
+// Initial calculation
 calculate();
 
-// SMOOTH SCROLL
+// ---- SMOOTH SCROLL for all anchor links ----
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
-    if (target) target.scrollIntoView({ behavior: 'smooth' });
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
   });
 });
 
-// MOBILE NAV
+// ---- MOBILE NAV ----
 document.querySelector('.hamburger')?.addEventListener('click', function() {
   const links = document.querySelector('.nav-links');
   links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
